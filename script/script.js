@@ -33,7 +33,7 @@ function updateTime(){
 		if(minutes == 60){
 			minutes = 0;
 			hours++;
-			if(hours == 12){
+			if(hours == 24){
 				hours = 0;
 				minutes = 0;
 				seconds = 0;
