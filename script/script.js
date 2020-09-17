@@ -1,4 +1,3 @@
-var hours,minutes,seconds,hoursHTML,minutesHTML,secondsHTML;
 function timeToString(time){
 	if(time < 10){
 		return '0' + time;
@@ -6,15 +5,15 @@ function timeToString(time){
 		return String(time);
 	}
 }
-function setLocalTime(){
+function setTime(){
 	var now = new Date();
-	hours = now.getHours();
-	minutes = now.getMinutes();
-	seconds = now.getSeconds(); 
+	var hours = now.getHours();
+	var minutes = now.getMinutes();
+	var seconds = now.getSeconds(); 
 
-	hoursHTML = document.getElementsByClassName('hours');
-	minutesHTML = document.getElementsByClassName('minutes');
-	secondsHTML = document.getElementsByClassName('seconds');
+	var hoursHTML = document.getElementsByClassName('hours');
+	var minutesHTML = document.getElementsByClassName('minutes');
+	var secondsHTML = document.getElementsByClassName('seconds');
 
 	hoursHTML[0].innerHTML = timeToString(hours)[0];
 	hoursHTML[1].innerHTML = timeToString(hours)[1];
@@ -25,29 +24,6 @@ function setLocalTime(){
 	secondsHTML[0].innerHTML = timeToString(seconds)[0];
 	secondsHTML[1].innerHTML = timeToString(seconds)[1];
 }
-function updateTime(){
-	seconds++;
-	if (seconds == 60){
-		seconds = 0;
-		minutes++;
-		if(minutes == 60){
-			minutes = 0;
-			hours++;
-			if(hours == 24){
-				hours = 0;
-				minutes = 0;
-				seconds = 0;
-			}
-		}
-	}
-	hoursHTML[0].innerHTML = timeToString(hours)[0];
-	hoursHTML[1].innerHTML = timeToString(hours)[1];
-
-	minutesHTML[0].innerHTML = timeToString(minutes)[0];
-	minutesHTML[1].innerHTML = timeToString(minutes)[1];
-
-	secondsHTML[0].innerHTML = timeToString(seconds)[0];
-	secondsHTML[1].innerHTML = timeToString(seconds)[1];
+window.onload = function(){
+	setInterval(setTime,1000);
 }
-setLocalTime();
-setTimeout(setInterval(updateTime,1000),1000)
