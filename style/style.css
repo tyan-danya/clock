@@ -1,26 +1,26 @@
 @font-face{ 
-	font-family:'helvetica';
-	src: url('../fonts/HelveticaThin/HelveticaThin.ttf');
+  font-family:'helvetica';
+  src: url('../fonts/HelveticaThin/HelveticaThin.ttf');
 }
 body { 
-	background-color: #111111;
-	color:white;
-	font-family:'helvetica';
+  background-color: #111111;
+  color:white;
+  font-family:'helvetica';
 }
 .clock{
-	height: 270px;
-	margin-top:17%;
-	margin-left:250px;
+  height: 270px;
+  margin-top:17%;
+  margin-left:250px;
 }
 .clock > div{
-	display:inline-block;
-	font-size: 15em;
+  display:inline-block;
+  font-size: 15em;
 }
 .numbers{
-	width:12%;
-	height:100%;
-	background: linear-gradient(0deg, #191419, #27252C);
-	text-align: center;
-	border-radius: 20px;
-	border:1px solid #2C2933;
+  width:12%;
+  height:100%;
+  background: linear-gradient(0deg, #191419, #27252C);
+  text-align: center;
+  border-radius: 20px;
+  border:1px solid #2C2933;
 }
