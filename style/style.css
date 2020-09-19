@@ -1,6 +1,6 @@
-@font-face{
- font-family:'helvetica';
- src: url('../fonts/HelveticaThin/HelveticaThin.ttf');
+@font-face{ 
+	font-family:'helvetica';
+	src: url('../fonts/HelveticaThin/HelveticaThin.ttf');
 }
 body { 
 	background-color: #111111;

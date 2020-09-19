@@ -5,7 +5,7 @@ function timeToString(time){
 		return String(time);
 	}
 }
-function setTime(){
+function setTime(){	
 	var now = new Date();
 	var hours = now.getHours();
 	var minutes = now.getMinutes();
