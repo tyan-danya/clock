@@ -25,5 +25,5 @@ function setTime(){
   secondsHTML[1].innerHTML = timeToString(seconds)[1];
 }
 window.onload = function(){
-  setInterval(setTime,1000);
+  setInterval(setTime, 1000);
 }
