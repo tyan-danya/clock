@@ -1,11 +1,11 @@
-function timeToString(time){
+function timeToString (time) {
   if(time < 10){
     return '0' + time;
   } else {
     return String(time);
   }
 }
-function setTime(){	
+function setTime () {	
   var now = new Date();
   var hours = now.getHours();
   var minutes = now.getMinutes();
@@ -24,6 +24,6 @@ function setTime(){
   secondsHTML[0].innerHTML = timeToString(seconds)[0];
   secondsHTML[1].innerHTML = timeToString(seconds)[1];
 }
-window.onload = function(){
+window.onload = function () {
   setInterval(setTime, 1000);
 }
